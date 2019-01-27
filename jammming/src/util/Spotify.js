@@ -42,9 +42,6 @@ const Spotify = {
         let playlistId;
         let userEndpoint = 'https://api.spotify.com/v1/me';
 
-        if(!playlistName && trackURIs === 0){
-            return;
-        }
         return fetch(userEndpoint, {
             headers: headers
         }).then(response => response.json()).then(jsonResponse =>{
